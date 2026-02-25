@@ -1,16 +1,15 @@
 "use client";
 
 import { useTranslations } from "next-intl";
+import { motion } from "framer-motion";
 import { testimonials } from "@/data/testimonials";
+import { AnimateIn } from "@/components/ui/AnimateIn";
 
 function StarRating({ rating }: { rating: number }) {
   return (
     <div className="flex gap-0.5">
       {Array.from({ length: 5 }).map((_, i) => (
-        <span
-          key={i}
-          className={i < rating ? "text-gold" : "text-surface-elevated"}
-        >
+        <span key={i} className={i < rating ? "text-gold" : "text-surface-elevated"}>
           ★
         </span>
       ))}
@@ -25,18 +24,31 @@ export function Testimonials() {
     <section className="bg-bg py-20 lg:py-28">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-14">
+        <AnimateIn className="text-center mb-14">
           <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4">
             {t("title")}
           </h2>
           <p className="text-muted text-lg max-w-2xl mx-auto">{t("subtitle")}</p>
-        </div>
+        </AnimateIn>
 
-        {/* Testimonials grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* Cards — staggered */}
+        <motion.div
+          className="grid grid-cols-1 md:grid-cols-3 gap-6"
+          initial="hidden"
+          whileInView="show"
+          viewport={{ once: true, margin: "-60px" }}
+          variants={{
+            hidden: {},
+            show: { transition: { staggerChildren: 0.15 } },
+          }}
+        >
           {testimonials.map((testimonial) => (
-            <div
+            <motion.div
               key={testimonial.id}
+              variants={{
+                hidden: { opacity: 0, y: 24 },
+                show: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.25, 0.1, 0.25, 1] } },
+              }}
               className="bg-surface border border-red-primary/20 rounded-xl p-6 flex flex-col gap-4"
             >
               <StarRating rating={testimonial.rating} />
@@ -54,9 +66,9 @@ export function Testimonials() {
                   <p className="text-xs text-muted">{testimonial.location}</p>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

@@ -3,6 +3,7 @@ import { Hero } from "@/components/sections/Hero";
 import { TrustBar } from "@/components/sections/TrustBar";
 import { ServicesOverview } from "@/components/sections/ServicesOverview";
 import { WhyChooseUs } from "@/components/sections/WhyChooseUs";
+import { PhotoBreak } from "@/components/sections/PhotoBreak";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { NewsPreview } from "@/components/sections/NewsPreview";
 import { ContactCTA } from "@/components/sections/ContactCTA";
@@ -50,7 +51,7 @@ export default async function HomePage({
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  await params; // ensure locale is resolved for server-side rendering
+  await params;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -78,7 +79,6 @@ export default async function HomePage({
       },
     ],
     priceRange: "$$",
-    image: "https://jingtongvisa.com/images/og-image.jpg",
   };
 
   return (
@@ -91,6 +91,15 @@ export default async function HomePage({
       <TrustBar />
       <ServicesOverview />
       <WhyChooseUs />
+
+      {/* Full-width photo break — replace src with licensed China photography before launch */}
+      <PhotoBreak
+        src="https://picsum.photos/seed/china-great-wall/1920/600"
+        alt="China landmark"
+        quote="Your journey to China starts here — we handle every step of the visa process."
+        height="h-64 lg:h-80"
+      />
+
       <Testimonials />
       <NewsPreview />
       <ContactCTA />
