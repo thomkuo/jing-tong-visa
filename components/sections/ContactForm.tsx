@@ -79,7 +79,7 @@ export function ContactForm() {
             })}
           />
           {errors.name && (
-            <p className="mt-1 text-xs text-red-primary">Please enter your name.</p>
+            <p className="mt-1 text-xs text-red-primary">{t("validationName")}</p>
           )}
         </div>
 
@@ -100,7 +100,7 @@ export function ContactForm() {
             })}
           />
           {errors.email && (
-            <p className="mt-1 text-xs text-red-primary">Please enter a valid email.</p>
+            <p className="mt-1 text-xs text-red-primary">{t("validationEmail")}</p>
           )}
         </div>
       </div>
@@ -155,9 +155,7 @@ export function ContactForm() {
           {...register("message", { required: true, minLength: 10 })}
         />
         {errors.message && (
-          <p className="mt-1 text-xs text-red-primary">
-            Please write a message (at least 10 characters).
-          </p>
+          <p className="mt-1 text-xs text-red-primary">{t("validationMessage")}</p>
         )}
       </div>
 

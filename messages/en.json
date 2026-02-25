@@ -7,7 +7,8 @@
     "faq": "FAQ",
     "news": "News",
     "cta": "Get Started",
-    "langToggle": "中文"
+    "langToggle": "中文",
+    "mobileMenuToggle": "Toggle menu"
   },
   "footer": {
     "tagline": "Your trusted China visa partner in Washington D.C.",
@@ -19,7 +20,12 @@
     "hours": "Mon – Fri: 9am – 6pm EST",
     "copyright": "© {year} Jing Tong Visa Services. All rights reserved.",
     "langToggle": "中文",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "labelAddress": "Address",
+    "labelPhone": "Phone",
+    "labelEmail": "Email",
+    "labelHours": "Hours",
+    "labelContact": "Contact"
   },
   "hero": {
     "badge": "Trusted China Visa Experts",
@@ -112,6 +118,7 @@
     "heroBadge": "Tourist Visa (L Visa)",
     "heroTitle": "Tourist Visa Document Checklist",
     "heroSubtitle": "Use this checklist to gather your documents before applying. Check off each item as you collect it.",
+    "progressSuffix": "of {total} items checked",
     "printButton": "Print Checklist",
     "contactBanner": "Not sure which documents apply to you?",
     "contactBannerCta": "Contact Us →",
@@ -263,6 +270,9 @@
     "required": "required",
     "infoTitle": "Office Information",
     "infoConsulateNote": "Our office is conveniently located less than 1 mile from the Chinese Consulate in Washington D.C., ensuring fast document delivery and up-to-date knowledge of all consulate requirements.",
+    "validationName": "Please enter your name.",
+    "validationEmail": "Please enter a valid email.",
+    "validationMessage": "Please write a message (at least 10 characters).",
     "mapComingSoon": "Interactive map coming soon",
     "visaTypes": {
       "tourist": "Tourist Visa (L Visa)",
@@ -270,6 +280,26 @@
       "family": "Family Reunion Visa (S Visa)",
       "business": "Business Visa (M Visa)",
       "other": "Other / Not Sure"
+    }
+  },
+  "newsPage": {
+    "heroBadge": "News & Insights",
+    "heroTitle": "News & Updates",
+    "heroSubtitle": "Stay up to date on China visa policy changes, travel tips, and announcements from Jing Tong.",
+    "allCategories": "All",
+    "minRead": "{min} min read",
+    "by": "By {author}",
+    "noArticles": "No articles found in this category.",
+    "backToNews": "← Back to News",
+    "relatedTitle": "Related Articles",
+    "shareTitle": "Share this article",
+    "copyLink": "Copy Link",
+    "copied": "Copied!",
+    "categories": {
+      "visa-tips": "Visa Tips",
+      "policy-updates": "Policy Updates",
+      "travel": "Travel",
+      "announcements": "Announcements"
     }
   }
 }

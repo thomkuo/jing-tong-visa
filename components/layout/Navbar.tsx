@@ -93,7 +93,7 @@ export function Navbar() {
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="lg:hidden p-2 rounded-md text-muted hover:text-foreground hover:bg-surface transition-colors"
-            aria-label="Toggle menu"
+            aria-label={t("mobileMenuToggle")}
           >
             <span className="block w-5 h-0.5 bg-current mb-1.5 transition-all duration-200" />
             <span className="block w-5 h-0.5 bg-current mb-1.5 transition-all duration-200" />

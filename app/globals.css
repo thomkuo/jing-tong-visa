@@ -35,3 +35,151 @@ body {
   background-color: #0D0D0D;
   color: #F5F0EB;
 }
+
+/* ── MDX Article Body ─────────────────────────────────────────────────────── */
+.article-body {
+  color: #F5F0EB;
+  font-size: 1rem;
+  line-height: 1.8;
+  max-width: 72ch;
+}
+
+.article-body h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #F5F0EB;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.3;
+}
+
+.article-body h3 {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #F5F0EB;
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+}
+
+.article-body h4 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  color: #F5F0EB;
+  margin-top: 1.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.article-body p {
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  color: #D4CEC9;
+}
+
+.article-body a {
+  color: #C0392B;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color 0.15s;
+}
+
+.article-body a:hover {
+  color: #A93226;
+}
+
+.article-body strong {
+  color: #F5F0EB;
+  font-weight: 600;
+}
+
+.article-body ul,
+.article-body ol {
+  margin-bottom: 1.25rem;
+  padding-left: 1.5rem;
+}
+
+.article-body ul {
+  list-style-type: disc;
+}
+
+.article-body ol {
+  list-style-type: decimal;
+}
+
+.article-body li {
+  color: #D4CEC9;
+  margin-bottom: 0.4rem;
+  line-height: 1.75;
+}
+
+.article-body blockquote {
+  border-left: 3px solid #C0392B;
+  padding-left: 1.25rem;
+  margin: 1.5rem 0;
+  color: #9E9E9E;
+  font-style: italic;
+}
+
+.article-body blockquote p {
+  color: #9E9E9E;
+  margin-bottom: 0;
+}
+
+.article-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+}
+
+.article-body th {
+  background-color: #1A1A1A;
+  color: #F5F0EB;
+  font-weight: 600;
+  text-align: left;
+  padding: 0.6rem 0.85rem;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.article-body td {
+  padding: 0.6rem 0.85rem;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #D4CEC9;
+}
+
+.article-body tr:nth-child(even) td {
+  background-color: rgba(255,255,255,0.03);
+}
+
+.article-body code {
+  background-color: #1A1A1A;
+  color: #D4AC0D;
+  padding: 0.15rem 0.4rem;
+  border-radius: 4px;
+  font-size: 0.875rem;
+  font-family: ui-monospace, monospace;
+}
+
+.article-body pre {
+  background-color: #1A1A1A;
+  padding: 1.25rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  margin-bottom: 1.5rem;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.article-body pre code {
+  background: none;
+  padding: 0;
+  color: #F5F0EB;
+}
+
+.article-body hr {
+  border: none;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin: 2rem 0;
+}

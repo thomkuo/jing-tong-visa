@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import Link from "next/link";
 import { useTranslations, useLocale } from "next-intl";
 import { motion, AnimatePresence } from "framer-motion";
@@ -84,6 +84,10 @@ export function ChecklistSection() {
   const sectionHasChecked = (section: ConditionalSection) =>
     section.items.some((item) => checkedItems.has(item.id));
 
+  const totalItems =
+    basicGroups.reduce((a, g) => a + g.items.length, 0) +
+    conditionalSections.reduce((a, s) => a + s.items.length, 0);
+
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-24">
 
@@ -107,10 +111,8 @@ export function ChecklistSection() {
       {/* Print + progress row */}
       <div className="flex items-center justify-between mb-10 print:hidden">
         <p className="text-sm text-muted">
-          <span className="font-semibold text-foreground">{checkedItems.size}</span> of{" "}
-          {basicGroups.reduce((a, g) => a + g.items.length, 0) +
-            conditionalSections.reduce((a, s) => a + s.items.length, 0)}{" "}
-          items checked
+          <span className="font-semibold text-foreground">{checkedItems.size}</span>{" "}
+          {t("progressSuffix", { total: totalItems })}
         </p>
         <button
           onClick={() => window.print()}
@@ -146,16 +148,15 @@ export function ChecklistSection() {
 
               <ul className="flex flex-col gap-0.5">
                 {group.items.map((item) => (
-                  <>
-                    {item.isOr && <OrSeparator key={`or-${item.id}`} label={t("orSeparator")} />}
+                  <Fragment key={item.id}>
+                    {item.isOr && <OrSeparator label={t("orSeparator")} />}
                     <CheckItem
-                      key={item.id}
                       item={item}
                       checked={checkedItems.has(item.id)}
                       onToggle={toggle}
                       t={t}
                     />
-                  </>
+                  </Fragment>
                 ))}
               </ul>
 

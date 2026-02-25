@@ -73,24 +73,24 @@ export default async function ContactPage({
                   {[
                     {
                       icon: "📍",
-                      label: "Address",
+                      label: footer("labelAddress"),
                       value: footer("address"),
                     },
                     {
                       icon: "📞",
-                      label: "Phone",
+                      label: footer("labelPhone"),
                       value: footer("phone"),
                       href: `tel:${footer("phone")}`,
                     },
                     {
                       icon: "✉️",
-                      label: "Email",
+                      label: footer("labelEmail"),
                       value: footer("email"),
                       href: `mailto:${footer("email")}`,
                     },
                     {
                       icon: "🕐",
-                      label: "Hours",
+                      label: footer("labelHours"),
                       value: footer("hours"),
                     },
                   ].map((item) => (

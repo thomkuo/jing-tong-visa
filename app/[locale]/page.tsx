@@ -7,6 +7,7 @@ import { PhotoBreak } from "@/components/sections/PhotoBreak";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { NewsPreview } from "@/components/sections/NewsPreview";
 import { ContactCTA } from "@/components/sections/ContactCTA";
+import { getAllNewsArticles } from "@/lib/mdx";
 
 export async function generateMetadata({
   params,
@@ -51,7 +52,8 @@ export default async function HomePage({
 }: {
   params: Promise<{ locale: string }>;
 }) {
-  await params;
+  const { locale } = await params;
+  const latestArticles = getAllNewsArticles(locale).slice(0, 3);
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -101,7 +103,7 @@ export default async function HomePage({
       />
 
       <Testimonials />
-      <NewsPreview />
+      <NewsPreview articles={latestArticles} />
       <ContactCTA />
     </>
   );

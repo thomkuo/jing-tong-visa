@@ -4,10 +4,10 @@ import Link from "next/link";
 import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
-import { newsItems } from "@/data/news";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
 import { AnimateIn } from "@/components/ui/AnimateIn";
+import type { NewsArticleMeta } from "@/lib/mdx";
 
 function formatDate(dateStr: string, locale: string): string {
   const date = new Date(dateStr);
@@ -18,10 +18,10 @@ function formatDate(dateStr: string, locale: string): string {
   });
 }
 
-export function NewsPreview() {
+export function NewsPreview({ articles }: { articles: NewsArticleMeta[] }) {
   const t = useTranslations("newsPreview");
   const locale = useLocale();
-  const preview = newsItems.slice(0, 3);
+  const preview = articles.slice(0, 3);
 
   return (
     <section className="bg-surface py-20 lg:py-28">

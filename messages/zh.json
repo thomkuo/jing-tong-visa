@@ -7,7 +7,8 @@
     "faq": "常见问题",
     "news": "新闻动态",
     "cta": "立即咨询",
-    "langToggle": "English"
+    "langToggle": "English",
+    "mobileMenuToggle": "展开菜单"
   },
   "footer": {
     "tagline": "您在华盛顿特区值得信赖的中国签证服务伙伴",
@@ -19,7 +20,12 @@
     "hours": "周一至周五：上午9点 – 下午6点（东部时间）",
     "copyright": "© {year} 精通签证服务。保留所有权利。",
     "langToggle": "English",
-    "rights": "保留所有权利。"
+    "rights": "保留所有权利。",
+    "labelAddress": "地址",
+    "labelPhone": "电话",
+    "labelEmail": "邮箱",
+    "labelHours": "营业时间",
+    "labelContact": "联系方式"
   },
   "hero": {
     "badge": "专业中国签证服务",
@@ -112,6 +118,7 @@
     "heroBadge": "旅游签证（L签证）",
     "heroTitle": "旅游签证文件清单",
     "heroSubtitle": "使用此清单在申请前准备所需文件。收集每项文件后请打勾确认。",
+    "progressSuffix": "/ {total} 项已勾选",
     "printButton": "打印清单",
     "contactBanner": "不确定哪些文件适用于您？",
     "contactBannerCta": "联系我们 →",
@@ -263,6 +270,9 @@
     "required": "必填",
     "infoTitle": "办公室信息",
     "infoConsulateNote": "我们的办公室位于华盛顿特区中国驻美领事馆不到1英里处，确保文件快速递送并及时掌握领事馆的最新要求。",
+    "validationName": "请输入您的姓名。",
+    "validationEmail": "请输入有效的电子邮箱。",
+    "validationMessage": "请输入留言内容（至少10个字符）。",
     "mapComingSoon": "地图即将上线",
     "visaTypes": {
       "tourist": "旅游签证（L签证）",
@@ -270,6 +280,26 @@
       "family": "家庭团聚签证（S签证）",
       "business": "商务签证（M签证）",
       "other": "其他 / 不确定"
+    }
+  },
+  "newsPage": {
+    "heroBadge": "新闻与资讯",
+    "heroTitle": "最新动态",
+    "heroSubtitle": "及时了解中国签证政策变化、旅行建议及精通签证的最新公告。",
+    "allCategories": "全部",
+    "minRead": "{min}分钟阅读",
+    "by": "作者：{author}",
+    "noArticles": "此分类暂无文章。",
+    "backToNews": "← 返回新闻",
+    "relatedTitle": "相关文章",
+    "shareTitle": "分享本文",
+    "copyLink": "复制链接",
+    "copied": "已复制！",
+    "categories": {
+      "visa-tips": "签证技巧",
+      "policy-updates": "政策更新",
+      "travel": "旅行",
+      "announcements": "公告"
     }
   }
 }

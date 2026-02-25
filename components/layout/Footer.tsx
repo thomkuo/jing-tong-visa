@@ -75,13 +75,13 @@ export function Footer() {
             <ul className="flex flex-col gap-3">
               <li>
                 <p className="text-xs text-muted uppercase tracking-wider mb-0.5">
-                  Address
+                  {t("labelAddress")}
                 </p>
                 <p className="text-sm text-foreground">{t("address")}</p>
               </li>
               <li>
                 <p className="text-xs text-muted uppercase tracking-wider mb-0.5">
-                  Phone
+                  {t("labelPhone")}
                 </p>
                 <a
                   href={`tel:${t("phone")}`}
@@ -92,7 +92,7 @@ export function Footer() {
               </li>
               <li>
                 <p className="text-xs text-muted uppercase tracking-wider mb-0.5">
-                  Email
+                  {t("labelEmail")}
                 </p>
                 <a
                   href={`mailto:${t("email")}`}
@@ -103,7 +103,7 @@ export function Footer() {
               </li>
               <li>
                 <p className="text-xs text-muted uppercase tracking-wider mb-0.5">
-                  Hours
+                  {t("labelHours")}
                 </p>
                 <p className="text-sm text-foreground">{t("hours")}</p>
               </li>
@@ -121,7 +121,7 @@ export function Footer() {
               href={`/${locale}/contact`}
               className="text-xs text-muted hover:text-foreground transition-colors"
             >
-              Contact
+              {t("labelContact")}
             </Link>
             <span className="text-white/10">|</span>
             <p className="text-xs text-muted">
