@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "Home",
+    "services": "Services",
+    "pricing": "Pricing",
+    "checklist": "Document Checklist",
+    "faq": "FAQ",
+    "news": "News",
+    "cta": "Get Started",
+    "langToggle": "中文"
+  },
+  "footer": {
+    "tagline": "Your trusted China visa partner in Washington D.C.",
+    "quickLinks": "Quick Links",
+    "contactUs": "Contact Us",
+    "address": "1234 Connecticut Ave NW, Washington D.C. 20036",
+    "phone": "+1 (202) 555-0123",
+    "email": "info@jingtongvisa.com",
+    "hours": "Mon – Fri: 9am – 6pm EST",
+    "copyright": "© {year} Jing Tong Visa Services. All rights reserved.",
+    "langToggle": "中文",
+    "rights": "All rights reserved."
+  },
+  "hero": {
+    "badge": "Trusted China Visa Experts",
+    "headline": "Your Trusted China Visa Partner in Washington D.C.",
+    "subheadline": "Expert visa assistance — from document preparation to consulate submission. Located steps from the Chinese Consulate.",
+    "ctaServices": "View Services",
+    "ctaContact": "Contact Us"
+  },
+  "trustBar": {
+    "visasValue": "500+",
+    "visasLabel": "Visas Approved",
+    "experienceValue": "15+",
+    "experienceLabel": "Years of Experience",
+    "locationValue": "< 1 Mile",
+    "locationLabel": "From Chinese Consulate D.C.",
+    "ratingValue": "5★",
+    "ratingLabel": "Client Satisfaction"
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Expert China visa services tailored to your needs",
+    "learnMore": "Learn More",
+    "comingSoon": "Coming Soon",
+    "mostPopular": "Most Popular",
+    "timeline": "Typical Timeline",
+    "touristVisa": {
+      "timeline": "5–10 Business Days"
+    }
+  },
+  "whyUs": {
+    "title": "Why Choose Jing Tong?",
+    "subtitle": "We combine local expertise with personalized service to make your visa process seamless"
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Hundreds of satisfied travelers trust Jing Tong for their China visa needs"
+  },
+  "newsPreview": {
+    "title": "Latest News & Updates",
+    "subtitle": "Stay informed about China visa policies, travel tips, and important updates",
+    "viewAll": "View All News",
+    "readMore": "Read More",
+    "minRead": "{min} min read"
+  },
+  "contactCta": {
+    "badge": "Free Consultation",
+    "headline": "Ready to Start Your China Visa Application?",
+    "subheadline": "Contact us today for a free consultation. Our experts are ready to guide you through every step of the process.",
+    "cta": "Contact Us Today"
+  }
+}

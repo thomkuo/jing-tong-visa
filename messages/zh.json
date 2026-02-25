@@ -1,0 +1,73 @@
+{
+  "nav": {
+    "home": "首页",
+    "services": "服务",
+    "pricing": "价格",
+    "checklist": "文件清单",
+    "faq": "常见问题",
+    "news": "新闻动态",
+    "cta": "立即咨询",
+    "langToggle": "English"
+  },
+  "footer": {
+    "tagline": "您在华盛顿特区值得信赖的中国签证服务伙伴",
+    "quickLinks": "快速链接",
+    "contactUs": "联系我们",
+    "address": "美国华盛顿特区康涅狄格大道西北1234号",
+    "phone": "+1 (202) 555-0123",
+    "email": "info@jingtongvisa.com",
+    "hours": "周一至周五：上午9点 – 下午6点（东部时间）",
+    "copyright": "© {year} 精通签证服务。保留所有权利。",
+    "langToggle": "English",
+    "rights": "保留所有权利。"
+  },
+  "hero": {
+    "badge": "专业中国签证服务",
+    "headline": "您在华盛顿特区值得信赖的中国签证服务机构",
+    "subheadline": "专业签证协助——从文件准备到领事馆提交，全程服务。我们毗邻中国驻美大使馆领事部。",
+    "ctaServices": "查看服务",
+    "ctaContact": "联系我们"
+  },
+  "trustBar": {
+    "visasValue": "500+",
+    "visasLabel": "签证获批数量",
+    "experienceValue": "15+",
+    "experienceLabel": "年从业经验",
+    "locationValue": "< 1英里",
+    "locationLabel": "距中国驻美领事馆",
+    "ratingValue": "5★",
+    "ratingLabel": "客户满意度"
+  },
+  "services": {
+    "title": "我们的服务",
+    "subtitle": "专业的中国签证服务，满足您的需求",
+    "learnMore": "了解更多",
+    "comingSoon": "即将推出",
+    "mostPopular": "最受欢迎",
+    "timeline": "办理周期",
+    "touristVisa": {
+      "timeline": "5–10个工作日"
+    }
+  },
+  "whyUs": {
+    "title": "为什么选择精通？",
+    "subtitle": "我们将本地专业知识与个性化服务相结合，让您的签证申请顺畅无忧"
+  },
+  "testimonials": {
+    "title": "客户评价",
+    "subtitle": "数百位满意的旅行者信任精通签证服务"
+  },
+  "newsPreview": {
+    "title": "最新资讯",
+    "subtitle": "及时了解中国签证政策、旅行小贴士和重要更新",
+    "viewAll": "查看全部资讯",
+    "readMore": "阅读更多",
+    "minRead": "{min}分钟阅读"
+  },
+  "contactCta": {
+    "badge": "免费咨询",
+    "headline": "准备开始申请中国签证？",
+    "subheadline": "立即联系我们获取免费咨询。我们的专业人员随时准备为您提供全程指导。",
+    "cta": "立即联系我们"
+  }
+}
