@@ -2,8 +2,16 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
+import { MapPin, Zap, Users, ShieldCheck, type LucideIcon } from "lucide-react";
 import { whyUsFeatures } from "@/data/whyUs";
 import { AnimateIn } from "@/components/ui/AnimateIn";
+
+const featureIcons: Record<string, LucideIcon> = {
+  "consulate-proximity": MapPin,
+  "fast-turnaround": Zap,
+  "personalized-service": Users,
+  "document-review": ShieldCheck,
+};
 
 export function WhyChooseUs() {
   const t = useTranslations("whyUs");
@@ -31,7 +39,9 @@ export function WhyChooseUs() {
             show: { transition: { staggerChildren: 0.12 } },
           }}
         >
-          {whyUsFeatures.map((feature) => (
+          {whyUsFeatures.map((feature) => {
+            const Icon = featureIcons[feature.id];
+            return (
             <motion.div
               key={feature.id}
               variants={{
@@ -40,7 +50,9 @@ export function WhyChooseUs() {
               }}
               className="bg-surface-elevated border border-red-primary/20 rounded-xl p-6 hover:border-red-primary/50 transition-colors duration-300 group"
             >
-              <div className="text-3xl mb-4">{feature.icon}</div>
+              <div className="mb-4">
+                {Icon && <Icon className="text-red-500 w-6 h-6" />}
+              </div>
               <h3 className="font-display text-lg font-semibold text-foreground mb-3 group-hover:text-red-primary transition-colors duration-200">
                 {locale === "zh" ? feature.titleZh : feature.title}
               </h3>
@@ -50,7 +62,8 @@ export function WhyChooseUs() {
                   : feature.description}
               </p>
             </motion.div>
-          ))}
+            );
+          })}
         </motion.div>
       </div>
     </section>

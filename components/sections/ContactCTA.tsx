@@ -60,7 +60,8 @@ export function ContactCTA() {
           >
             <Button
               href={`/${locale}/contact`}
-              className="bg-white text-red-primary hover:bg-white/90 font-semibold shadow-xl"
+              variant="white"
+              className="font-semibold"
               size="lg"
             >
               {t("cta")}

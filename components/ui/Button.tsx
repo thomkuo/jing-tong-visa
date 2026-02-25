@@ -4,7 +4,7 @@ import { type ReactNode } from "react";
 interface ButtonProps {
   href?: string;
   onClick?: () => void;
-  variant?: "primary" | "secondary" | "ghost";
+  variant?: "primary" | "secondary" | "ghost" | "white";
   size?: "sm" | "md" | "lg";
   children: ReactNode;
   className?: string;
@@ -18,6 +18,7 @@ const variantClasses: Record<string, string> = {
   secondary:
     "border border-red-primary text-red-primary hover:bg-red-primary/10",
   ghost: "text-foreground hover:text-red-primary hover:bg-surface",
+  white: "bg-white hover:bg-white/90 text-red-primary shadow-xl",
 };
 
 const sizeClasses: Record<string, string> = {

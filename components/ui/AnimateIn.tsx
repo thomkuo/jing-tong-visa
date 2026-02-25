@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { type ReactNode } from "react";
 
 interface AnimateInProps {
@@ -27,6 +27,8 @@ export function AnimateIn({
   duration = 0.55,
   from = "bottom",
 }: AnimateInProps) {
+  const shouldReduce = useReducedMotion();
+  if (shouldReduce) return <div className={className}>{children}</div>;
   return (
     <motion.div
       className={className}

@@ -25,7 +25,24 @@ export async function generateMetadata({
   return {
     title: titles[locale] ?? titles.en,
     description: descriptions[locale] ?? descriptions.en,
+    alternates: {
+      canonical: `https://jingtongvisa.com/${locale}/pricing`,
+      languages: {
+        en: "https://jingtongvisa.com/en/pricing",
+        zh: "https://jingtongvisa.com/zh/pricing",
+        "x-default": "https://jingtongvisa.com/en/pricing",
+      },
+    },
     openGraph: {
+      title: titles[locale] ?? titles.en,
+      description: descriptions[locale] ?? descriptions.en,
+      url: `https://jingtongvisa.com/${locale}/pricing`,
+      siteName: "Jing Tong Visa Services",
+      locale: locale === "zh" ? "zh_CN" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
       title: titles[locale] ?? titles.en,
       description: descriptions[locale] ?? descriptions.en,
     },

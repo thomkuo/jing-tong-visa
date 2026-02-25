@@ -34,8 +34,8 @@ export function ServicesOverview() {
                 {/* Image left — replace with licensed China photography before launch */}
                 <div className="relative h-64 lg:h-auto lg:min-h-[420px] overflow-hidden">
                   <Image
-                    src="https://picsum.photos/seed/china-tourist-visa/800/600"
-                    alt="China tourist destination"
+                    src="https://images.unsplash.com/photo-1537519646099-335112f03225?w=800&q=80"
+                    alt="Li River, Guilin, China"
                     fill
                     className="object-cover object-center"
                     sizes="(max-width: 1024px) 100vw, 50vw"

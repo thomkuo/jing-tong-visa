@@ -24,13 +24,30 @@ export async function generateMetadata({
   return {
     title: `${article.title} | Jing Tong Visa`,
     description: article.excerpt,
+    alternates: {
+      canonical: `https://jingtongvisa.com/${locale}/news/${slug}`,
+      languages: {
+        en: `https://jingtongvisa.com/en/news/${slug}`,
+        zh: `https://jingtongvisa.com/zh/news/${slug}`,
+        "x-default": `https://jingtongvisa.com/en/news/${slug}`,
+      },
+    },
     openGraph: {
       title: article.title,
       description: article.excerpt,
       images: [{ url: article.coverImage }],
+      url: `https://jingtongvisa.com/${locale}/news/${slug}`,
+      siteName: "Jing Tong Visa Services",
+      locale: locale === "zh" ? "zh_CN" : "en_US",
       type: "article",
       publishedTime: article.date,
       authors: [article.author],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: article.title,
+      description: article.excerpt,
+      images: [article.coverImage],
     },
   };
 }
@@ -61,8 +78,28 @@ export default async function NewsArticlePage({
 
   const articleUrl = `https://jingtongvisa.com/${locale}/news/${slug}`;
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    headline: article.title,
+    description: article.excerpt,
+    image: article.coverImage,
+    datePublished: article.date,
+    author: { "@type": "Organization", name: article.author },
+    publisher: {
+      "@type": "Organization",
+      name: "Jing Tong Visa Services",
+      url: "https://jingtongvisa.com",
+    },
+    url: articleUrl,
+  };
+
   return (
     <article className="bg-bg min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* ── Cover image ─────────────────────────────────────────────────── */}
       <div className="relative h-72 sm:h-96 lg:h-[28rem] w-full overflow-hidden">
         <Image

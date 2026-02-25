@@ -12,9 +12,9 @@ export function Hero() {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background photo — replace with licensed China photography before launch */}
+      {/* Background photo */}
       <Image
-        src="https://picsum.photos/seed/china-hero-landscape/1920/1080"
+        src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1920&q=80"
         alt="China landscape"
         fill
         priority
@@ -23,9 +23,9 @@ export function Hero() {
       />
 
       {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black/65" />
+      <div className="absolute inset-0 bg-black/70" />
       {/* Red tint overlay */}
-      <div className="absolute inset-0 bg-red-primary/12" />
+      <div className="absolute inset-0 bg-red-900/20" />
       {/* Bottom vignette → blends into page bg */}
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-bg to-transparent" />
       {/* Subtle grid texture */}
@@ -41,13 +41,14 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
         <div className="max-w-4xl mx-auto">
-          {/* Badge */}
+          {/* Eyebrow rule + badge */}
           <motion.div
-            className="flex justify-center mb-6"
+            className="flex flex-col items-center gap-3 mb-6"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
           >
+            <div className="border-t border-red-600 w-16" />
             <Badge variant="default">{t("badge")}</Badge>
           </motion.div>
 

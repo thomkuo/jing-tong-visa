@@ -27,7 +27,24 @@ export async function generateMetadata({
   return {
     title: titles[locale] ?? titles.en,
     description: descriptions[locale] ?? descriptions.en,
+    alternates: {
+      canonical: `https://jingtongvisa.com/${locale}/services`,
+      languages: {
+        en: "https://jingtongvisa.com/en/services",
+        zh: "https://jingtongvisa.com/zh/services",
+        "x-default": "https://jingtongvisa.com/en/services",
+      },
+    },
     openGraph: {
+      title: titles[locale] ?? titles.en,
+      description: descriptions[locale] ?? descriptions.en,
+      url: `https://jingtongvisa.com/${locale}/services`,
+      siteName: "Jing Tong Visa Services",
+      locale: locale === "zh" ? "zh_CN" : "en_US",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
       title: titles[locale] ?? titles.en,
       description: descriptions[locale] ?? descriptions.en,
     },
@@ -162,7 +179,7 @@ export default async function ServicesPage({
               {t("applyCta")}
             </Button>
             <Button href={`/${locale}/pricing`} variant="secondary" size="lg">
-              View Pricing
+              {t("viewPricing")}
             </Button>
           </AnimateIn>
         </div>

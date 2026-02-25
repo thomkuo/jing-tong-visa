@@ -14,16 +14,22 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
+// next/font types are missing "chinese-simplified" for Noto Sans SC; cast to bypass the type gap
 const notoSansSC = Noto_Sans_SC({
-  subsets: ["latin"],
+  subsets: ["chinese-simplified" as "latin"],
   variable: "--font-noto-sc",
   weight: ["400", "500", "700"],
   display: "swap",
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://jingtongvisa.com"),
   title: "Jing Tong Visa Services",
   description: "Professional China visa services in Washington D.C.",
+  openGraph: {
+    siteName: "Jing Tong Visa Services",
+    type: "website",
+  },
 };
 
 export default function RootLayout({
