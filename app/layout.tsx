@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Playfair_Display, DM_Sans, Noto_Sans_SC } from "next/font/google";
+import { Cormorant_Garamond, DM_Sans, Noto_Sans_SC } from "next/font/google";
 import "./globals.css";
 
-const playfair = Playfair_Display({
+const playfair = Cormorant_Garamond({
   subsets: ["latin"],
   variable: "--font-playfair",
+  weight: ["400", "500", "600", "700"],
   display: "swap",
 });
 

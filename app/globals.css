@@ -12,7 +12,7 @@
   --color-muted: #9E9E9E;
 
   /* Fonts */
-  --font-display: var(--font-playfair), "Playfair Display", Georgia, serif;
+  --font-display: var(--font-playfair), "Cormorant Garamond", Georgia, serif;
   --font-sans: var(--font-dm-sans), "DM Sans", system-ui, sans-serif;
 }
 
