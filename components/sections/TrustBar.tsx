@@ -9,15 +9,14 @@ export function TrustBar() {
   const stats = [
     { value: t("visasValue"), label: t("visasLabel") },
     { value: t("experienceValue"), label: t("experienceLabel") },
-    { value: t("locationValue"), label: t("locationLabel") },
-    { value: t("ratingValue"), label: t("ratingLabel") },
+{ value: t("ratingValue"), label: t("ratingLabel") },
   ];
 
   return (
     <section className="bg-surface border-y border-red-primary/20 py-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
-          className="grid grid-cols-2 lg:grid-cols-4 gap-8"
+          className="grid grid-cols-3 gap-8"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-40px" }}

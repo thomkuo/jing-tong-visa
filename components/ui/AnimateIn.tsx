@@ -28,13 +28,12 @@ export function AnimateIn({
   from = "bottom",
 }: AnimateInProps) {
   const shouldReduce = useReducedMotion();
-  if (shouldReduce) return <div className={className}>{children}</div>;
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, ...offsets[from] }}
-      whileInView={{ opacity: 1, y: 0, x: 0 }}
-      transition={{ duration, delay, ease: [0.25, 0.1, 0.25, 1] }}
+      initial={shouldReduce ? false : { opacity: 0, ...offsets[from] }}
+      whileInView={shouldReduce ? {} : { opacity: 1, y: 0, x: 0 }}
+      transition={shouldReduce ? {} : { duration, delay, ease: [0.25, 0.1, 0.25, 1] }}
       viewport={{ once: true, margin: "-80px" }}
     >
       {children}

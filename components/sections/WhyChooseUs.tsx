@@ -2,14 +2,13 @@
 
 import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
-import { MapPin, Zap, Users, ShieldCheck, type LucideIcon } from "lucide-react";
+import { MapPin, Users, ShieldCheck, type LucideIcon } from "lucide-react";
 import { whyUsFeatures } from "@/data/whyUs";
 import { AnimateIn } from "@/components/ui/AnimateIn";
 
 const featureIcons: Record<string, LucideIcon> = {
   "consulate-proximity": MapPin,
-  "fast-turnaround": Zap,
-  "personalized-service": Users,
+"personalized-service": Users,
   "document-review": ShieldCheck,
 };
 
@@ -30,7 +29,7 @@ export function WhyChooseUs() {
 
         {/* Features grid — staggered */}
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-6"
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, margin: "-60px" }}

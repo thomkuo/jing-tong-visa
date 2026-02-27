@@ -11,22 +11,12 @@ export const whyUsFeatures: WhyUsFeature[] = [
   {
     id: "consulate-proximity",
     icon: "📍",
-    title: "Steps from the Consulate",
+    title: "D.C. Based",
     titleZh: "毗邻领事馆",
     description:
-      "Our office is located less than a mile from the Chinese Consulate in Washington D.C. We know their requirements inside and out.",
+      "Our office is located close to the Chinese Consulate in Washington D.C. We know their requirements inside and out.",
     descriptionZh:
       "我们的办公室距离华盛顿特区中国领事馆不到一英里。我们对领事馆的要求了如指掌。",
-  },
-  {
-    id: "fast-turnaround",
-    icon: "⚡",
-    title: "Fast Turnaround",
-    titleZh: "快速处理",
-    description:
-      "Most applications are processed within 5–10 business days. We also offer expedited options for urgent travel needs.",
-    descriptionZh:
-      "大多数申请在5–10个工作日内处理完毕。我们也提供加急服务，满足紧急出行需求。",
   },
   {
     id: "personalized-service",
