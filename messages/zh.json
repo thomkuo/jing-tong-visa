@@ -274,9 +274,14 @@
     "required": "必填",
     "infoTitle": "办公室信息",
     "infoConsulateNote": "我们的办公室位于华盛顿特区中国驻美领事馆不到1英里处，确保文件快速递送并及时掌握领事馆的最新要求。",
+    "wechat": "微信号",
+    "wechatPlaceholder": "您的微信号",
+    "state": "居住州",
+    "statePlaceholder": "请选择所在州...",
     "validationName": "请输入您的姓名。",
     "validationEmail": "请输入有效的电子邮箱。",
     "validationMessage": "请输入留言内容（至少10个字符）。",
+    "validationState": "请选择您的居住州。",
     "mapComingSoon": "地图即将上线",
     "visaTypes": {
       "tourist": "旅游签证（L签证）",
@@ -284,6 +289,26 @@
       "family": "家庭团聚签证（S签证）",
       "business": "商务签证（M签证）",
       "other": "其他 / 不确定"
+    },
+    "states": {
+      "alabama": "阿拉巴马州",
+      "arkansas": "阿肯色州",
+      "delaware": "特拉华州",
+      "dc": "哥伦比亚特区",
+      "florida": "佛罗里达州",
+      "georgia": "佐治亚州",
+      "kentucky": "肯塔基州",
+      "louisiana": "路易斯安那州",
+      "maryland": "马里兰州",
+      "mississippi": "密西西比州",
+      "northCarolina": "北卡罗来纳州",
+      "oklahoma": "俄克拉荷马州",
+      "puertoRico": "波多黎各",
+      "southCarolina": "南卡罗来纳州",
+      "tennessee": "田纳西州",
+      "texas": "德克萨斯州",
+      "virginia": "弗吉尼亚州",
+      "westVirginia": "西弗吉尼亚州"
     }
   },
   "newsPage": {

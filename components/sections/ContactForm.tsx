@@ -8,7 +8,9 @@ interface FormValues {
   name: string;
   email: string;
   phone?: string;
+  wechat?: string;
   visaType?: string;
+  state: string;
   message: string;
 }
 
@@ -105,7 +107,7 @@ export function ContactForm() {
         </div>
       </div>
 
-      {/* Phone + Visa Type row */}
+      {/* Phone + WeChat row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label className="block text-xs font-medium text-muted uppercase tracking-wider mb-1.5">
@@ -119,6 +121,21 @@ export function ContactForm() {
           />
         </div>
 
+        <div>
+          <label className="block text-xs font-medium text-muted uppercase tracking-wider mb-1.5">
+            {t("wechat")}
+          </label>
+          <input
+            type="text"
+            placeholder={t("wechatPlaceholder")}
+            className={inputBase}
+            {...register("wechat")}
+          />
+        </div>
+      </div>
+
+      {/* Visa Type + State of Residence row */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>
           <label className="block text-xs font-medium text-muted uppercase tracking-wider mb-1.5">
             {t("visaType")}
@@ -137,6 +154,43 @@ export function ContactForm() {
             <option value="Business Visa (M Visa)">{t("visaTypes.business")}</option>
             <option value="Other">{t("visaTypes.other")}</option>
           </select>
+        </div>
+
+        <div>
+          <label className="block text-xs font-medium text-muted uppercase tracking-wider mb-1.5">
+            {t("state")}{" "}
+            <span className="text-red-primary normal-case font-normal tracking-normal">
+              {t("required")}
+            </span>
+          </label>
+          <select
+            className={`${inputBase} cursor-pointer ${errors.state ? inputError : ""}`}
+            defaultValue=""
+            {...register("state", { required: true })}
+          >
+            <option value="" disabled>{t("statePlaceholder")}</option>
+            <option value="Alabama">{t("states.alabama")}</option>
+            <option value="Arkansas">{t("states.arkansas")}</option>
+            <option value="Delaware">{t("states.delaware")}</option>
+            <option value="District of Columbia">{t("states.dc")}</option>
+            <option value="Florida">{t("states.florida")}</option>
+            <option value="Georgia">{t("states.georgia")}</option>
+            <option value="Kentucky">{t("states.kentucky")}</option>
+            <option value="Louisiana">{t("states.louisiana")}</option>
+            <option value="Maryland">{t("states.maryland")}</option>
+            <option value="Mississippi">{t("states.mississippi")}</option>
+            <option value="North Carolina">{t("states.northCarolina")}</option>
+            <option value="Oklahoma">{t("states.oklahoma")}</option>
+            <option value="Puerto Rico">{t("states.puertoRico")}</option>
+            <option value="South Carolina">{t("states.southCarolina")}</option>
+            <option value="Tennessee">{t("states.tennessee")}</option>
+            <option value="Texas">{t("states.texas")}</option>
+            <option value="Virginia">{t("states.virginia")}</option>
+            <option value="West Virginia">{t("states.westVirginia")}</option>
+          </select>
+          {errors.state && (
+            <p className="mt-1 text-xs text-red-primary">{t("validationState")}</p>
+          )}
         </div>
       </div>
 

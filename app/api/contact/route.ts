@@ -9,7 +9,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid request body" }, { status: 400 });
   }
 
-  const { name, email, phone, visaType, message } = body;
+  const { name, email, phone, wechat, visaType, state, message } = body;
 
   if (!name || !email || !message) {
     return NextResponse.json({ error: "Missing required fields" }, { status: 400 });
@@ -21,7 +21,9 @@ export async function POST(req: NextRequest) {
       <tr><td style="padding:8px 0;color:#666;width:140px"><strong>Name</strong></td><td>${name}</td></tr>
       <tr><td style="padding:8px 0;color:#666"><strong>Email</strong></td><td>${email}</td></tr>
       <tr><td style="padding:8px 0;color:#666"><strong>Phone</strong></td><td>${phone || "Not provided"}</td></tr>
+      <tr><td style="padding:8px 0;color:#666"><strong>WeChat</strong></td><td>${wechat || "Not provided"}</td></tr>
       <tr><td style="padding:8px 0;color:#666"><strong>Visa Type</strong></td><td>${visaType || "Not specified"}</td></tr>
+      <tr><td style="padding:8px 0;color:#666"><strong>State</strong></td><td>${state || "Not provided"}</td></tr>
     </table>
     <hr style="border:none;border-top:1px solid #eee;margin:16px 0" />
     <p style="color:#666"><strong>Message:</strong></p>
@@ -33,7 +35,7 @@ export async function POST(req: NextRequest) {
     console.warn(
       "[contact] RESEND_API_KEY not set — logging submission instead of sending email."
     );
-    console.log("[contact]", { name, email, phone, visaType, message });
+    console.log("[contact]", { name, email, phone, wechat, visaType, state, message });
     return NextResponse.json({ success: true });
   }
 
