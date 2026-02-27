@@ -60,7 +60,6 @@ export default async function NewsIndexPage({
       <PageHero
         title={t("heroTitle")}
         subtitle={t("heroSubtitle")}
-        badge={t("heroBadge")}
         imageSeed="china-news-hero"
       />
       <section className="bg-bg">

@@ -4,7 +4,6 @@ import Image from "next/image";
 import { useTranslations, useLocale } from "next-intl";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/Button";
-import { Badge } from "@/components/ui/Badge";
 
 export function Hero() {
   const t = useTranslations("hero");
@@ -41,17 +40,6 @@ export function Hero() {
       {/* Content */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 text-center">
         <div className="max-w-4xl mx-auto">
-          {/* Eyebrow rule + badge */}
-          <motion.div
-            className="flex flex-col items-center gap-3 mb-6"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, ease: "easeOut" }}
-          >
-            <div className="border-t border-red-600 w-16" />
-            <Badge variant="default">{t("badge")}</Badge>
-          </motion.div>
-
           {/* Headline */}
           <motion.h1
             className="font-display text-5xl sm:text-6xl lg:text-7xl xl:text-8xl font-bold text-white leading-tight mb-6"
@@ -61,18 +49,6 @@ export function Hero() {
           >
             {t("headline")}
           </motion.h1>
-
-          {/* Divider */}
-          <motion.div
-            className="flex items-center justify-center gap-3 mb-6"
-            initial={{ opacity: 0, scaleX: 0.5 }}
-            animate={{ opacity: 1, scaleX: 1 }}
-            transition={{ duration: 0.5, delay: 0.25 }}
-          >
-            <div className="h-px w-12 bg-red-primary/80" />
-            <div className="w-1.5 h-1.5 rounded-full bg-gold" />
-            <div className="h-px w-12 bg-red-primary/80" />
-          </motion.div>
 
           {/* Subheadline */}
           <motion.p

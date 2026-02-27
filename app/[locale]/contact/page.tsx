@@ -60,7 +60,6 @@ export default async function ContactPage({
       <PageHero
         title={t("heroTitle")}
         subtitle={t("heroSubtitle")}
-        badge={t("heroBadge")}
         imageSeed="china-contact-hero"
       />
 

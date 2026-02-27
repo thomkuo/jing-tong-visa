@@ -58,7 +58,6 @@ export default async function ChecklistPage({
       <PageHero
         title={t("heroTitle")}
         subtitle={t("heroSubtitle")}
-        badge={t("heroBadge")}
         imageSeed="china-checklist-hero"
       />
       {/* Interactive checklist — client component */}

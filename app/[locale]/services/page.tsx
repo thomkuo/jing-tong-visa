@@ -72,7 +72,6 @@ export default async function ServicesPage({
       <PageHero
         title={t("heroTitle")}
         subtitle={t("heroSubtitle")}
-        badge={t("heroBadge")}
         imageSeed="china-services-hero"
       />
 

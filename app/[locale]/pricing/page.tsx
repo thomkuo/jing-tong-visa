@@ -62,7 +62,6 @@ export default async function PricingPage({
       <PageHero
         title={t("heroTitle")}
         subtitle={t("heroSubtitle")}
-        badge={t("heroBadge")}
         imageSeed="china-pricing-hero"
       />
 

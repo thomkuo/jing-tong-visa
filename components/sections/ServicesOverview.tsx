@@ -58,7 +58,6 @@ export function ServicesOverview() {
                 <div className="p-8 lg:p-10 flex flex-col justify-center">
                   <div className="flex items-center gap-3 mb-5">
                     <Badge variant="default">{t("mostPopular")}</Badge>
-                    <Badge variant="success">Active</Badge>
                   </div>
 
                   <h3 className="font-display text-2xl sm:text-3xl font-bold text-foreground mb-4">
@@ -73,18 +72,19 @@ export function ServicesOverview() {
                       : activeService.description}
                   </p>
 
-                  {/* Requirements checklist */}
-                  {activeService.requirements && (
-                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 mb-8">
-                      {activeService.requirements.map((req, idx) => (
+                  {/* Benefits */}
+                  {activeService.benefits && (
+                    <ul className="flex flex-col gap-2 mb-8">
+                      {(locale === "zh" && activeService.benefitsZh
+                        ? activeService.benefitsZh
+                        : activeService.benefits
+                      ).map((benefit, idx) => (
                         <li
                           key={idx}
                           className="flex items-start gap-2 text-sm text-muted"
                         >
-                          <span className="text-gold mt-0.5 flex-shrink-0">
-                            ✓
-                          </span>
-                          {req}
+                          <span className="text-gold mt-0.5 flex-shrink-0">✓</span>
+                          {benefit}
                         </li>
                       ))}
                     </ul>

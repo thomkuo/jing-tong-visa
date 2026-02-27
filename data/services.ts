@@ -20,6 +20,8 @@ export interface Service {
   descriptionZh: string;
   active: boolean;
   timeline?: string;
+  benefits?: string[];
+  benefitsZh?: string[];
   requirements?: string[];
   requirementsZh?: string[];
   processSteps?: ProcessStep[];
@@ -36,22 +38,26 @@ export const services: Service[] = [
     descriptionZh:
       "计划前往中国旅游？我们处理您旅游签证申请的每个步骤——从文件审核到领事馆提交——确保顺畅无忧的体验。",
     active: true,
-    timeline: "5–10 Business Days",
+    timeline: "~15 Business Days",
+    benefits: [
+      "Full application preparation & document review",
+      "Direct consulate submission from our D.C. office",
+      "End-to-end tracking until your visa is in hand",
+    ],
+    benefitsZh: [
+      "全程申请准备与文件审核",
+      "从我们华盛顿特区办公室直接提交至领事馆",
+      "全程跟踪，直至签证到手",
+    ],
     requirements: [
       "Valid U.S. passport (6+ months validity beyond travel dates)",
       "Completed China visa application form",
       "Recent passport-sized photo (white background, 2×2 in)",
-      "Hotel booking confirmation or invitation letter",
-      "Round-trip flight itinerary",
-      "Bank statements (last 3 months)",
     ],
     requirementsZh: [
       "有效美国护照（有效期超过旅行日期6个月以上）",
       "填写完整的中国签证申请表",
       "近期护照尺寸照片（白色背景，2×2英寸）",
-      "酒店预订确认或邀请函",
-      "往返机票行程单",
-      "银行流水单（近3个月）",
     ],
     processSteps: [
       {
