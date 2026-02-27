@@ -113,7 +113,7 @@ export function Footer() {
 
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-xs text-muted">
+          <p className="text-xs text-muted" suppressHydrationWarning>
             {t("copyright", { year })}
           </p>
           <div className="flex items-center gap-4">

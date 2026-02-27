@@ -58,7 +58,7 @@ export default async function FAQPage({
       <PageHero
         title={t("heroTitle")}
         subtitle={t("heroSubtitle")}
-        imageSeed="china-faq-hero"
+        imageSrc="/images/hongkong.jpg"
       />
       <section className="bg-bg">
         <FAQAccordion />

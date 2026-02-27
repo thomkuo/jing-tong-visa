@@ -72,7 +72,7 @@ export default async function ServicesPage({
       <PageHero
         title={t("heroTitle")}
         subtitle={t("heroSubtitle")}
-        imageSeed="china-services-hero"
+        imageSrc="/images/forbidden-city.jpg"
       />
 
       {/* ─── Tourist Visa Detail ─────────────────────────────────────── */}
@@ -90,8 +90,8 @@ export default async function ServicesPage({
             {/* Image */}
             <div className="relative h-72 lg:h-96 rounded-2xl overflow-hidden">
               <Image
-                src="https://picsum.photos/seed/china-visa-detail/800/600"
-                alt="China tourist destination"
+                src="/images/guilin.jpg"
+                alt="Li River, Guilin, China"
                 fill
                 className="object-cover"
                 sizes="(max-width: 1024px) 100vw, 50vw"

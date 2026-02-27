@@ -60,7 +60,7 @@ export default async function NewsIndexPage({
       <PageHero
         title={t("heroTitle")}
         subtitle={t("heroSubtitle")}
-        imageSeed="china-news-hero"
+        imageSrc="/images/china-flag.jpg"
       />
       <section className="bg-bg">
         <NewsGrid articles={articles} />

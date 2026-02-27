@@ -13,8 +13,8 @@ export function Hero() {
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background photo */}
       <Image
-        src="https://images.unsplash.com/photo-1508804185872-d7badad00f7d?w=1920&q=80"
-        alt="China landscape"
+        src="/images/great-wall.jpg"
+        alt="Great Wall of China"
         fill
         priority
         className="object-cover object-center"
@@ -46,6 +46,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.1, ease: "easeOut" }}
+            suppressHydrationWarning
           >
             {t("headline")}
           </motion.h1>
@@ -56,6 +57,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+            suppressHydrationWarning
           >
             {t("subheadline")}
           </motion.p>
@@ -66,6 +68,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+            suppressHydrationWarning
           >
             <Button
               href={`/${locale}/services`}

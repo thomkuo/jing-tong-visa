@@ -96,8 +96,8 @@ export default async function HomePage({
 
       {/* Full-width photo break — replace src with licensed China photography before launch */}
       <PhotoBreak
-        src="https://images.unsplash.com/photo-1547981609-4b6bfe67ca0b?w=1920&q=80"
-        alt="Shanghai skyline at night"
+        src="/images/unknown.jpg"
+        alt="unknown, China"
         quote="Your journey to China starts here — we handle every step of the visa process."
         height="h-64 lg:h-80"
       />

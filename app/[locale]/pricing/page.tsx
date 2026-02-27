@@ -62,7 +62,7 @@ export default async function PricingPage({
       <PageHero
         title={t("heroTitle")}
         subtitle={t("heroSubtitle")}
-        imageSeed="china-pricing-hero"
+        imageSrc="/images/zhangjiajie.jpg"
       />
 
       <section className="bg-bg py-16 lg:py-24">

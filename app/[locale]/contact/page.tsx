@@ -60,7 +60,7 @@ export default async function ContactPage({
       <PageHero
         title={t("heroTitle")}
         subtitle={t("heroSubtitle")}
-        imageSeed="china-contact-hero"
+        imageSrc="/images/china-flag.jpg"
       />
 
       <section className="bg-bg py-20 lg:py-28">
@@ -144,7 +144,7 @@ export default async function ContactPage({
                   <div className="flex flex-col items-center">
                     <div className="relative w-40 h-40 rounded-lg overflow-hidden bg-white p-1">
                       <Image
-                        src="/wechat-qr.png"
+                        src="/images/wechat-qr.png"
                         alt={footer("wechatQrAlt")}
                         fill
                         className="object-contain"

@@ -6,20 +6,15 @@ import { motion } from "framer-motion";
 interface PageHeroProps {
   title: string;
   subtitle?: string;
-  /** Picsum seed — replace with licensed photography before launch */
-  imageSeed?: string;
+  imageSrc: string;
 }
 
-export function PageHero({
-  title,
-  subtitle,
-  imageSeed = "page-hero",
-}: PageHeroProps) {
+export function PageHero({ title, subtitle, imageSrc }: PageHeroProps) {
   return (
     <section className="relative pt-32 pb-20 lg:pt-44 lg:pb-28 overflow-hidden">
       {/* Background photo */}
       <Image
-        src={`https://picsum.photos/seed/${imageSeed}/1920/800`}
+        src={imageSrc}
         alt="Page hero background"
         fill
         priority
@@ -36,6 +31,7 @@ export function PageHero({
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.08 }}
+          suppressHydrationWarning
         >
           {title}
         </motion.h1>
@@ -45,6 +41,7 @@ export function PageHero({
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.18 }}
+            suppressHydrationWarning
           >
             {subtitle}
           </motion.p>
