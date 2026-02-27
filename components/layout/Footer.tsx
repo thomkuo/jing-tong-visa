@@ -107,6 +107,12 @@ export function Footer() {
                 </p>
                 <p className="text-sm text-foreground">{t("hours")}</p>
               </li>
+              <li>
+                <p className="text-xs text-muted uppercase tracking-wider mb-0.5">
+                  {t("labelWeChat")}
+                </p>
+                <p className="text-sm text-foreground">{t("wechat")}</p>
+              </li>
             </ul>
           </div>
         </div>

@@ -14,8 +14,8 @@
     "tagline": "Your trusted China visa partner in Washington D.C.",
     "quickLinks": "Quick Links",
     "contactUs": "Contact Us",
-    "address": "1234 Connecticut Ave NW, Washington D.C. 20036",
-    "phone": "+1 (202) 555-0123",
+    "address": "7980 Tyson Oaks Circle",
+    "phone": "+1 (469) 863-2879",
     "email": "info@jingtongvisa.com",
     "hours": "Mon – Fri: 9am – 6pm EST",
     "copyright": "© {year} Jing Tong Visa Services. All rights reserved.",
@@ -25,12 +25,16 @@
     "labelPhone": "Phone",
     "labelEmail": "Email",
     "labelHours": "Hours",
-    "labelContact": "Contact"
+    "labelContact": "Contact",
+    "labelWeChat": "WeChat",
+    "wechat": "@JingTongTravel",
+    "wechatQrAlt": "Scan to add Jing Tong Visa on WeChat",
+    "wechatScan": "Scan to connect on WeChat"
   },
   "hero": {
     "badge": "Trusted China Visa Experts",
-    "headline": "Your Trusted China Visa Partner in Washington D.C.",
-    "subheadline": "Expert visa assistance — from document preparation to consulate submission. Located steps from the Chinese Consulate.",
+    "headline": "Jing Tong Visa Services",
+    "subheadline": "Expert visa assistance — from document preparation to consulate submission.",
     "ctaServices": "View Services",
     "ctaContact": "Contact Us"
   },
@@ -111,12 +115,13 @@
     "notIncludedLabel": "Not Included",
     "getStarted": "Get Started",
     "faqNote": "Have questions about what's included?",
-    "faqLink": "Visit our FAQ →"
+    "faqLink": "Visit our FAQ →",
+    "expeditedNote": "Need it faster? Expedited processing is available for an additional $60 per application."
   },
   "checklistPage": {
     "heroBadge": "Tourist Visa (L Visa)",
-    "heroTitle": "Tourist Visa Document Checklist",
-    "heroSubtitle": "Use this checklist to gather your documents before applying. Check off each item as you collect it.",
+    "heroTitle": "Visa Document Checklist",
+    "heroSubtitle": "Use this checklist to gather your documents before applying.",
     "progressSuffix": "of {total} items checked",
     "printButton": "Print Checklist",
     "contactBanner": "Not sure which documents apply to you?",
@@ -192,7 +197,7 @@
   "faqPage": {
     "heroBadge": "Help Center",
     "heroTitle": "Frequently Asked Questions",
-    "heroSubtitle": "Find answers to the most common questions about applying for a China visa through Jing Tong.",
+    "heroSubtitle": "Find answers to the most common questions about applying for a China visa.",
     "jumpTo": "Jump to:",
     "categories": {
       "general": "General",

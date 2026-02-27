@@ -1,10 +1,14 @@
 export interface ProcessStep {
   step: number;
-  icon: string;
+  icon: string;           // kept for reference; component uses Lucide mapped by step number
   title: string;
   titleZh: string;
   description: string;
   descriptionZh: string;
+  timeline?: string;      // e.g., "1–3 business days"
+  timelineZh?: string;
+  note?: string;
+  noteZh?: string;
 }
 
 export interface Service {
@@ -72,16 +76,33 @@ export const services: Service[] = [
       },
       {
         step: 3,
-        icon: "🔍",
-        title: "Expert Review",
-        titleZh: "专业审核",
+        icon: "📤",
+        title: "COVA Application Submission",
+        titleZh: "COVA系统提交",
         description:
-          "Our team meticulously reviews every document — catching errors before they reach the consulate and cause delays.",
+          "We prepare and submit your application through China's official online visa system (COVA). Most applications are pre-approved on the first submission thanks to our experience.",
         descriptionZh:
-          "我们的团队仔细审查每份文件——在提交领事馆前发现并纠正错误，避免不必要的延误。",
+          "我们通过中国官方在线签证系统（COVA）准备并提交您的申请。凭借我们的丰富经验，大多数申请在首次提交时即可获得预审通过。",
+        timeline: "1–3 business days",
+        timelineZh: "1–3个工作日",
       },
       {
         step: 4,
+        icon: "🕐",
+        title: "Pre-Approval Review",
+        titleZh: "预审审核",
+        description:
+          "The visa office reviews your COVA submission. Pre-approval authorizes your passport to be submitted for final processing — it does not mean the visa has been issued yet.",
+        descriptionZh:
+          "签证处审核您的COVA申请。预审通过表明您的护照可以提交进行最终处理——并不意味着签证已经签发。",
+        timeline: "3–10 business days",
+        timelineZh: "3–10个工作日",
+        note: "While awaiting pre-approval, we may ask you to mail in your passport so there's no delay once approval comes through.",
+        noteZh:
+          "在等待预审期间，我们可能会请您提前邮寄护照，以便预审通过后立即处理，不造成延误。",
+      },
+      {
+        step: 5,
         icon: "🏛️",
         title: "Consulate Submission",
         titleZh: "领事馆提交",
@@ -89,16 +110,11 @@ export const services: Service[] = [
           "We submit your complete application package directly to the Chinese Consulate. Our proximity means faster turnaround.",
         descriptionZh:
           "我们将您的完整申请材料直接提交至中国领事馆。毗邻优势确保更快的处理速度。",
-      },
-      {
-        step: 5,
-        icon: "🔔",
-        title: "Tracking & Updates",
-        titleZh: "跟踪与更新",
-        description:
-          "We monitor your application status and keep you informed at every stage. No uncertainty, no surprises.",
-        descriptionZh:
-          "我们全程跟踪您的申请状态，随时向您汇报进展。无不确定性，无意外情况。",
+        timeline: "5–10 business days",
+        timelineZh: "5–10个工作日",
+        note: "Some cases may require additional administrative review at the Embassy's discretion. We notify you as soon as a decision is made.",
+        noteZh:
+          "部分案例可能需要使馆自行决定是否进行额外的行政审查。我们会在第一时间通知您结果。",
       },
       {
         step: 6,
@@ -106,9 +122,11 @@ export const services: Service[] = [
         title: "Visa in Hand",
         titleZh: "签证到手",
         description:
-          "Your passport is returned with your visa stamp. You're ready to explore China — bon voyage!",
+          "Your passport is shipped back to you via FedEx with tracking and signature confirmation. Your visa is ready — time to explore China.",
         descriptionZh:
-          "您的护照贴上签证章后归还给您。您已准备好探索中国——祝您旅途愉快！",
+          "您的护照将通过FedEx快递寄回，全程追踪并需签名确认。您的签证已准备好——是时候探索中国了。",
+        timeline: "~2 business days (FedEx)",
+        timelineZh: "约2个工作日（FedEx）",
       },
     ],
   },

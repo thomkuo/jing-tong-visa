@@ -70,7 +70,7 @@ export default async function PricingPage({
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
 
           {/* ── Two pricing cards ─────────────────────────── */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-6">
 
             {/* Card 1 — Standard */}
             <AnimateIn delay={0}>
@@ -98,12 +98,12 @@ export default async function PricingPage({
             {/* Card 2 — Group Rate */}
             <AnimateIn delay={0.1}>
               <div className="relative bg-surface-elevated border border-red-primary/50 shadow-lg shadow-red-primary/10 rounded-2xl p-8 flex flex-col h-full">
-                <div className="absolute -top-3.5 left-1/2 -translate-x-1/2">
+                <div className="flex items-start justify-between gap-2 mb-1">
+                  <h3 className="font-display text-2xl font-bold text-foreground">
+                    {t("groupTitle")}
+                  </h3>
                   <Badge variant="default">{t("bestValue")}</Badge>
                 </div>
-                <h3 className="font-display text-2xl font-bold text-foreground mb-1">
-                  {t("groupTitle")}
-                </h3>
                 <p className="text-sm text-muted mb-6">{t("groupApplicants")}</p>
                 <div className="flex items-baseline gap-1.5 mb-8">
                   <span className="font-display text-5xl font-bold text-foreground">
@@ -122,6 +122,14 @@ export default async function PricingPage({
             </AnimateIn>
 
           </div>
+
+          {/* ── Expedited add-on ─────────────────────────── */}
+          <AnimateIn>
+            <div className="bg-gold/5 border border-gold/20 rounded-xl px-5 py-4 flex items-center gap-3 mb-10">
+              <span className="text-gold flex-shrink-0">⚡</span>
+              <p className="text-sm text-foreground">{t("expeditedNote")}</p>
+            </div>
+          </AnimateIn>
 
           {/* ── What's Included ────────────────────────────── */}
           <AnimateIn>

@@ -14,8 +14,8 @@
     "tagline": "您在华盛顿特区值得信赖的中国签证服务伙伴",
     "quickLinks": "快速链接",
     "contactUs": "联系我们",
-    "address": "美国华盛顿特区康涅狄格大道西北1234号",
-    "phone": "+1 (202) 555-0123",
+    "address": "7980 Tyson Oaks",
+    "phone": "+1 (469) 863-2879",
     "email": "info@jingtongvisa.com",
     "hours": "周一至周五：上午9点 – 下午6点（东部时间）",
     "copyright": "© {year} 精通签证服务。保留所有权利。",
@@ -25,7 +25,11 @@
     "labelPhone": "电话",
     "labelEmail": "邮箱",
     "labelHours": "营业时间",
-    "labelContact": "联系方式"
+    "labelContact": "联系方式",
+    "labelWeChat": "微信",
+    "wechat": "JingTongTravel",
+    "wechatQrAlt": "扫码添加精通签证微信",
+    "wechatScan": "扫码添加微信"
   },
   "hero": {
     "badge": "专业中国签证服务",
@@ -111,7 +115,8 @@
     "notIncludedLabel": "不包含",
     "getStarted": "立即开始",
     "faqNote": "对包含内容有更多疑问？",
-    "faqLink": "访问常见问题页面 →"
+    "faqLink": "访问常见问题页面 →",
+    "expeditedNote": "需要加快办理？加急处理每份申请额外收费 $60。"
   },
   "checklistPage": {
     "heroBadge": "旅游签证（L签证）",

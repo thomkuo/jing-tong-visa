@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations } from "next-intl/server";
+import Image from "next/image";
 import { PageHero } from "@/components/layout/PageHero";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { AnimateIn } from "@/components/ui/AnimateIn";
@@ -105,11 +106,6 @@ export default async function ContactPage({
                       value: footer("email"),
                       href: `mailto:${footer("email")}`,
                     },
-                    {
-                      icon: "🕐",
-                      label: footer("labelHours"),
-                      value: footer("hours"),
-                    },
                   ].map((item) => (
                     <div
                       key={item.label}
@@ -135,18 +131,28 @@ export default async function ContactPage({
                   ))}
                 </div>
 
-                {/* Consulate note */}
-                <div className="bg-red-primary/10 border border-red-primary/30 rounded-xl p-5 mb-6">
-                  <p className="text-sm text-foreground/90 leading-relaxed">
-                    📌 {t("infoConsulateNote")}
-                  </p>
-                </div>
-
-                {/* Map placeholder */}
-                <div className="bg-surface border border-white/10 rounded-xl overflow-hidden h-48 flex items-center justify-center">
-                  <div className="text-center px-4">
-                    <p className="text-3xl mb-2">🗺️</p>
-                    <p className="text-xs text-muted">{t("mapComingSoon")}</p>
+                {/* WeChat */}
+                <div className="bg-surface border border-white/10 rounded-xl p-5 mb-4">
+                  <div className="flex items-start gap-3 mb-4">
+                    <span className="text-xl flex-shrink-0">💬</span>
+                    <div>
+                      <p className="text-xs text-muted uppercase tracking-wider mb-0.5">
+                        {footer("labelWeChat")}
+                      </p>
+                      <p className="text-sm text-foreground">{footer("wechat")}</p>
+                    </div>
+                  </div>
+                  <div className="flex flex-col items-center">
+                    <div className="relative w-40 h-40 rounded-lg overflow-hidden bg-white p-1">
+                      <Image
+                        src="/wechat-qr.png"
+                        alt={footer("wechatQrAlt")}
+                        fill
+                        className="object-contain"
+                        sizes="160px"
+                      />
+                    </div>
+                    <p className="text-xs text-muted mt-2">{footer("wechatScan")}</p>
                   </div>
                 </div>
               </AnimateIn>
