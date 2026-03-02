@@ -10,7 +10,8 @@ import { AnimateIn } from "@/components/ui/AnimateIn";
 import type { NewsArticleMeta } from "@/lib/mdx";
 
 function formatDate(dateStr: string, locale: string): string {
-  const date = new Date(dateStr);
+  const [y, m, d] = dateStr.split("-").map(Number);
+  const date = new Date(y, m - 1, d); // local time — avoids UTC-offset hydration mismatch
   return date.toLocaleDateString(locale === "zh" ? "zh-CN" : "en-US", {
     year: "numeric",
     month: "long",

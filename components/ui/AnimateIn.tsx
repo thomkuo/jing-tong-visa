@@ -27,7 +27,9 @@ export function AnimateIn({
   duration = 0.55,
   from = "bottom",
 }: AnimateInProps) {
-  const shouldReduce = useReducedMotion();
+  // useReducedMotion returns null on the server — normalize to false so SSR and
+  // client initial render agree, avoiding a hydration mismatch.
+  const shouldReduce = useReducedMotion() === true;
   return (
     <motion.div
       className={className}

@@ -32,9 +32,9 @@
     "wechatScan": "扫码添加微信"
   },
   "hero": {
-    "badge": "专业中国签证服务",
-    "headline": "您在华盛顿特区值得信赖的中国签证服务机构",
-    "subheadline": "专业签证协助——从文件准备到领事馆提交，全程服务。我们毗邻中国驻美大使馆领事部。",
+    "badge": "值得信赖的中国签证专家",
+    "headline": "京通签证服务",
+    "subheadline": "专业签证协助——从文件准备到领事馆提交，全程为您服务。",
     "ctaServices": "查看服务",
     "ctaContact": "联系我们"
   },
@@ -81,7 +81,7 @@
     "cta": "立即联系我们"
   },
   "servicesPage": {
-    "heroBadge": "我们的服务",
+    "heroBadge": "我们的服务项目",
     "heroTitle": "专业中国签证服务",
     "heroSubtitle": "专业、快速、个性化——从文件审核到领事馆提交，全程服务。",
     "activeBadge": "当前可用",
@@ -120,8 +120,8 @@
   },
   "checklistPage": {
     "heroBadge": "旅游签证（L签证）",
-    "heroTitle": "旅游签证文件清单",
-    "heroSubtitle": "使用此清单在申请前准备所需文件。收集每项文件后请打勾确认。",
+    "heroTitle": "签证文件清单",
+    "heroSubtitle": "使用此清单在申请前准备所需文件。",
     "progressSuffix": "/ {total} 项已勾选",
     "printButton": "打印清单",
     "contactBanner": "不确定哪些文件适用于您？",
@@ -197,7 +197,7 @@
   "faqPage": {
     "heroBadge": "帮助中心",
     "heroTitle": "常见问题",
-    "heroSubtitle": "查找关于通过精通签证申请中国签证最常见问题的解答。",
+    "heroSubtitle": "查找关于申请中国签证最常见问题的解答。",
     "jumpTo": "快速导航：",
     "categories": {
       "general": "一般问题",
@@ -313,7 +313,7 @@
   },
   "newsPage": {
     "heroBadge": "新闻与资讯",
-    "heroTitle": "最新动态",
+    "heroTitle": "新闻与动态",
     "heroSubtitle": "及时了解中国签证政策变化、旅行建议及精通签证的最新公告。",
     "allCategories": "全部",
     "minRead": "{min}分钟阅读",

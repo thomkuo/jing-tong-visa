@@ -20,10 +20,13 @@ function categoryKey(cat: string): string {
 }
 
 function formatDate(dateStr: string, locale: string): string {
-  return new Date(dateStr).toLocaleDateString(
-    locale === "zh" ? "zh-CN" : "en-US",
-    { year: "numeric", month: "long", day: "numeric" }
-  );
+  const [y, m, d] = dateStr.split("-").map(Number);
+  const date = new Date(y, m - 1, d); // local time — avoids UTC-offset hydration mismatch
+  return date.toLocaleDateString(locale === "zh" ? "zh-CN" : "en-US", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
 }
 
 export function NewsGrid({ articles }: { articles: NewsArticleMeta[] }) {

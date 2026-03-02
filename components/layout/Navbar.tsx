@@ -52,7 +52,7 @@ export function Navbar() {
             className="flex items-center gap-2 group flex-shrink-0"
           >
             <span className="font-display text-lg font-bold text-red-primary group-hover:text-red-dark transition-colors">
-              精通
+              京通
             </span>
             <span className="font-display text-lg font-semibold text-foreground group-hover:text-white transition-colors hidden sm:block">
               Jing Tong Visa

@@ -72,7 +72,7 @@ export default async function ServicesPage({
       <PageHero
         title={t("heroTitle")}
         subtitle={t("heroSubtitle")}
-        imageSrc="/images/forbidden-city.jpg"
+        imageSrc="/images/Forbidden-City.jpg"
       />
 
       {/* ─── Tourist Visa Detail ─────────────────────────────────────── */}
