@@ -63,7 +63,7 @@ export default async function HomePage({
       "Expert China visa services in Washington D.C., located near the Chinese Consulate.",
     url: "https://jingtongvisa.com",
     telephone: "+1-202-555-0123",
-    email: "info@jingtongvisa.com",
+    email: "contact@jingtongvisa.com",
     address: {
       "@type": "PostalAddress",
       streetAddress: "1234 Connecticut Ave NW",
