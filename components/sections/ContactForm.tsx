@@ -12,6 +12,7 @@ interface FormValues {
   visaType?: string;
   state: string;
   message: string;
+  website?: string; // honeypot — hidden from real users
 }
 
 const inputBase =
@@ -62,6 +63,14 @@ export function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} noValidate className="flex flex-col gap-5">
+      {/* Honeypot — hidden from real users, bots will fill it */}
+      <input
+        type="text"
+        {...register("website")}
+        style={{ display: "none" }}
+        tabIndex={-1}
+        autoComplete="off"
+      />
       {/* Name + Email row */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
         <div>

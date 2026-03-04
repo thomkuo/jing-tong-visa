@@ -1,6 +1,14 @@
 import { NextRequest, NextResponse } from "next/server";
 import { Resend } from "resend";
 
+// ── In-memory rate limiting ──────────────────────────────────────────────────
+const ipMap = new Map<string, { count: number; resetAt: number }>();
+let globalDaily = { count: 0, resetAt: 0 };
+
+const IP_LIMIT = 3;
+const IP_WINDOW_MS = 60 * 60 * 1000; // 1 hour
+const DAILY_LIMIT = 50;
+
 export async function POST(req: NextRequest) {
   let body: Record<string, string>;
   try {
@@ -9,6 +17,41 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({ error: "Invalid request body" }, { status: 400 });
   }
 
+  // ── Layer 1: Honeypot ──────────────────────────────────────────────────────
+  if (body.website) {
+    // Bot filled the hidden field — silently succeed without sending
+    return NextResponse.json({ success: true });
+  }
+
+  // ── Layer 2: Rate limiting ─────────────────────────────────────────────────
+  const now = Date.now();
+
+  // Global daily cap (resets at midnight UTC)
+  const midnight = new Date();
+  midnight.setUTCHours(24, 0, 0, 0);
+  if (now >= globalDaily.resetAt) {
+    globalDaily = { count: 0, resetAt: midnight.getTime() };
+  }
+  if (globalDaily.count >= DAILY_LIMIT) {
+    return NextResponse.json({ error: "Service temporarily unavailable" }, { status: 429 });
+  }
+
+  // Per-IP cap
+  const ip =
+    req.headers.get("x-forwarded-for")?.split(",")[0].trim() ?? "unknown";
+  const ipEntry = ipMap.get(ip);
+  if (ipEntry && now < ipEntry.resetAt) {
+    if (ipEntry.count >= IP_LIMIT) {
+      return NextResponse.json({ error: "Too many requests" }, { status: 429 });
+    }
+    ipEntry.count++;
+  } else {
+    ipMap.set(ip, { count: 1, resetAt: now + IP_WINDOW_MS });
+  }
+
+  globalDaily.count++;
+
+  // ── Field extraction ───────────────────────────────────────────────────────
   const { name, email, phone, wechat, visaType, state, message } = body;
 
   if (!name || !email || !message) {
