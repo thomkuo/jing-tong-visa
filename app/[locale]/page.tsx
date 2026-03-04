@@ -18,7 +18,7 @@ export async function generateMetadata({
 
   const titles: Record<string, string> = {
     en: "Jing Tong Visa Services | China Visa Experts in Washington D.C.",
-    zh: "精通签证服务 | 华盛顿特区中国签证专家",
+    zh: "京通签证服务 | 华盛顿特区中国签证专家",
   };
 
   const descriptions: Record<string, string> = {

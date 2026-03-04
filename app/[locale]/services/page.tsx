@@ -18,7 +18,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const titles: Record<string, string> = {
     en: "China Visa Services | Jing Tong Visa — Washington D.C.",
-    zh: "中国签证服务 | 精通签证 — 华盛顿特区",
+    zh: "中国签证服务 | 京通签证 — 华盛顿特区",
   };
   const descriptions: Record<string, string> = {
     en: "Full-service China tourist visa processing in Washington D.C. Expert document review, consulate submission, and application tracking. 500+ visas approved.",

@@ -351,7 +351,7 @@ title: "[待翻译] Your English Title Here"
 date: "YYYY-MM-DD"
 excerpt: "[待翻译] Your English excerpt here."
 category: "Visa Tips"
-author: "精通签证团队"
+author: "京通签证团队"
 coverImage: "https://your-image-url/image.jpg"
 ---
 

@@ -12,7 +12,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const titles: Record<string, string> = {
     en: "Frequently Asked Questions | Jing Tong Visa — Washington D.C.",
-    zh: "常见问题 | 精通签证 — 华盛顿特区",
+    zh: "常见问题 | 京通签证 — 华盛顿特区",
   };
   const descriptions: Record<string, string> = {
     en: "Answers to common questions about China visa requirements, fees, processing times, and what to expect after submission.",

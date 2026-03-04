@@ -13,11 +13,11 @@ export async function generateMetadata({
   const { locale } = await params;
   const titles: Record<string, string> = {
     en: "Contact Us | Jing Tong Visa Services — Washington D.C.",
-    zh: "联系我们 | 精通签证服务 — 华盛顿特区",
+    zh: "联系我们 | 京通签证服务 — 华盛顿特区",
   };
   const descriptions: Record<string, string> = {
     en: "Get in touch with Jing Tong Visa Services. Located near the Chinese Consulate in Washington D.C. Free consultation — we respond within 1 business day.",
-    zh: "联系精通签证服务。办公室位于华盛顿特区中国领事馆附近。免费咨询——我们在1个工作日内回复。",
+    zh: "联系京通签证服务。办公室位于华盛顿特区中国领事馆附近。免费咨询——我们在1个工作日内回复。",
   };
   return {
     title: titles[locale] ?? titles.en,

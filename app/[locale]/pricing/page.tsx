@@ -16,7 +16,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const titles: Record<string, string> = {
     en: "Visa Service Pricing | Jing Tong Visa — Washington D.C.",
-    zh: "签证服务价格 | 精通签证 — 华盛顿特区",
+    zh: "签证服务价格 | 京通签证 — 华盛顿特区",
   };
   const descriptions: Record<string, string> = {
     en: "All-inclusive China visa service pricing in Washington D.C. $250/person for 1–3 applicants, $220/person for groups of 4+. Embassy fee included, no hidden charges.",

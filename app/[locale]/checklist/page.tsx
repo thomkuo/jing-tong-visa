@@ -12,7 +12,7 @@ export async function generateMetadata({
   const { locale } = await params;
   const titles: Record<string, string> = {
     en: "Tourist Visa Document Checklist | Jing Tong Visa — Washington D.C.",
-    zh: "旅游签证文件清单 | 精通签证 — 华盛顿特区",
+    zh: "旅游签证文件清单 | 京通签证 — 华盛顿特区",
   };
   const descriptions: Record<string, string> = {
     en: "Complete document checklist for your China tourist visa application. Interactive, printable, and updated for 2025 requirements.",

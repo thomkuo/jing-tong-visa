@@ -13,11 +13,11 @@ export async function generateMetadata({
   const { locale } = await params;
   const titles: Record<string, string> = {
     en: "News & Updates | Jing Tong Visa — Washington D.C.",
-    zh: "新闻动态 | 精通签证 — 华盛顿特区",
+    zh: "新闻动态 | 京通签证 — 华盛顿特区",
   };
   const descriptions: Record<string, string> = {
     en: "Stay informed on China visa policy changes, travel tips, and announcements from Jing Tong Visa Services.",
-    zh: "及时了解中国签证政策变化、旅行建议及精通签证服务的最新公告。",
+    zh: "及时了解中国签证政策变化、旅行建议及京通签证服务的最新公告。",
   };
   return {
     title: titles[locale] ?? titles.en,

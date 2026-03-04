@@ -31,7 +31,7 @@ export function Footer() {
           <div className="md:col-span-1">
             <Link href={`/${locale}`} className="inline-flex items-center gap-2 mb-4">
               <span className="font-display text-xl font-bold text-red-primary">
-                精通
+                京通
               </span>
               <span className="font-display text-xl font-semibold text-foreground">
                 Jing Tong Visa
