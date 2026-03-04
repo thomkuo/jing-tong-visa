@@ -42,7 +42,7 @@ export async function POST(req: NextRequest) {
   try {
     const resend = new Resend(process.env.RESEND_API_KEY);
     await resend.emails.send({
-      from: "Jing Tong Visa Website <noreply@jingtongvisa.com>",
+      from: "Jing Tong Visa Website <noreply@contact.jingtongvisa.com>",
       to: "contact@jingtongvisa.com",
       replyTo: email,
       subject: `Contact Form — ${visaType || "General Inquiry"} from ${name}`,
